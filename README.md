@@ -1,2 +1,2 @@
-# zeppelin
-Zeppelin Notebooks
+# notebooks
+This repository contains various Zeppelin and Jupyter notebooks
