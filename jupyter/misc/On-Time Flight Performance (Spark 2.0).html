@@ -11772,11 +11772,49 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[37]:</div>
+<div class="prompt input_prompt">In&nbsp;[1]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-python2"><pre><span></span>%%configure -f
 { &quot;conf&quot;: {&quot;spark.jars.packages&quot;: &quot;graphframes:graphframes:0.3.0-spark2.0-s_2.11&quot; }}
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt"></div>
+
+<div class="output_html rendered_html output_subarea ">
+Current session configs: <tt>{u'kind': 'pyspark', u'conf': {u'spark.jars.packages': u'graphframes:graphframes:0.3.0-spark2.0-s_2.11'}}</tt><br>
+</div>
+
+</div>
+
+<div class="output_area"><div class="prompt"></div>
+
+<div class="output_html rendered_html output_subarea ">
+No active sessions.
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[2]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-python2"><pre><span></span>import os
+sc.addPyFile(os.path.expanduser(&#39;./graphframes_graphframes-0.3.0-spark2.0-s_2.11.jar&#39;))
+from graphframes import *
 </pre></div>
 
 </div>
@@ -11798,7 +11836,7 @@ div#notebook {
 
 <div class="output_html rendered_html output_subarea ">
 <table>
-<tr><th>ID</th><th>YARN Application ID</th><th>Kind</th><th>State</th><th>Spark UI</th><th>Driver log</th><th>Current session?</th></tr><tr><td>13</td><td>application_1488244839612_0016</td><td>pyspark</td><td>idle</td><td><a target="_blank" href="http://hn1-sparkt.com4t3pmq4xe5pkjvrznduc4hb.cx.internal.cloudapp.net:8088/proxy/application_1488244839612_0016/">Link</a></td><td><a target="_blank" href="http://10.0.0.5:30060/node/containerlogs/container_1488244839612_0016_01_000001/livy">Link</a></td><td>✔</td></tr></table>
+<tr><th>ID</th><th>YARN Application ID</th><th>Kind</th><th>State</th><th>Spark UI</th><th>Driver log</th><th>Current session?</th></tr><tr><td>0</td><td>application_1488655105795_0014</td><td>pyspark</td><td>idle</td><td><a target="_blank" href="http://hn1-sparki.fah3q2mfsyuufmqq2gjbzbpy5a.cx.internal.cloudapp.net:8088/proxy/application_1488655105795_0014/">Link</a></td><td><a target="_blank" href="http://10.0.0.5:30060/node/containerlogs/container_1488655105795_0014_01_000001/livy">Link</a></td><td>✔</td></tr></table>
 </div>
 
 </div>
@@ -11810,38 +11848,6 @@ div#notebook {
 </div>
 </div>
 
-<div class="output_area"><div class="prompt"></div>
-
-<div class="output_html rendered_html output_subarea ">
-Current session configs: <tt>{u'kind': 'pyspark', u'conf': {u'spark.jars.packages': u'graphframes:graphframes:0.3.0-spark2.0-s_2.11'}}</tt><br>
-</div>
-
-</div>
-
-<div class="output_area"><div class="prompt"></div>
-
-<div class="output_html rendered_html output_subarea ">
-<table>
-<tr><th>ID</th><th>YARN Application ID</th><th>Kind</th><th>State</th><th>Spark UI</th><th>Driver log</th><th>Current session?</th></tr><tr><td>8</td><td>application_1488244839612_0011</td><td>pyspark3</td><td>idle</td><td><a target="_blank" href="http://hn1-sparkt.com4t3pmq4xe5pkjvrznduc4hb.cx.internal.cloudapp.net:8088/proxy/application_1488244839612_0011/">Link</a></td><td><a target="_blank" href="http://10.0.0.5:30060/node/containerlogs/container_1488244839612_0011_01_000001/livy">Link</a></td><td></td></tr><tr><td>13</td><td>application_1488244839612_0016</td><td>pyspark</td><td>idle</td><td><a target="_blank" href="http://hn1-sparkt.com4t3pmq4xe5pkjvrznduc4hb.cx.internal.cloudapp.net:8088/proxy/application_1488244839612_0016/">Link</a></td><td><a target="_blank" href="http://10.0.0.5:30060/node/containerlogs/container_1488244839612_0016_01_000001/livy">Link</a></td><td>✔</td></tr></table>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[38]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-python2"><pre><span></span>import os
-sc.addPyFile(os.path.expanduser(&#39;./graphframes_graphframes-0.3.0-spark2.0-s_2.11.jar&#39;))
-from graphframes import *
-</pre></div>
-
-</div>
 </div>
 </div>
 
@@ -11858,7 +11864,7 @@ from graphframes import *
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[39]:</div>
+<div class="prompt input_prompt">In&nbsp;[3]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-python2"><pre><span></span># Set File Paths
@@ -11904,7 +11910,7 @@ airports.cache()
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[40]:</div>
+<div class="prompt input_prompt">In&nbsp;[4]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-python2"><pre><span></span># Build `departureDelays_geo` DataFrame
@@ -11939,41 +11945,14 @@ departureDelays_geo.count()
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[41]:</div>
+<div class="prompt input_prompt">In&nbsp;[30]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-python2"><pre><span></span># Review the top 10 rows of the `departureDelays_geo` DataFrame
-departureDelays_geo.show(10)
+<div class=" highlight hl-python2"><pre><span></span>%%sql
+select * from departureDelays_geo limit 10
 </pre></div>
 
 </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area"><div class="prompt"></div>
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>+-------+--------------------+-----+--------+---+---+-----------+-------------------+---------+---------+
-| tripid|           localdate|delay|distance|src|dst|   city_src|           city_dst|state_src|state_dst|
-+-------+--------------------+-----+--------+---+---+-----------+-------------------+---------+---------+
-|1011111|2014-01-01 11:11:...|   -5|     221|MSP|INL|Minneapolis|International Falls|       MN|       MN|
-|1021111|2014-01-02 11:11:...|    7|     221|MSP|INL|Minneapolis|International Falls|       MN|       MN|
-|1031111|2014-01-03 11:11:...|    0|     221|MSP|INL|Minneapolis|International Falls|       MN|       MN|
-|1041925|2014-01-04 19:25:...|    0|     221|MSP|INL|Minneapolis|International Falls|       MN|       MN|
-|1061115|2014-01-06 11:15:...|   33|     221|MSP|INL|Minneapolis|International Falls|       MN|       MN|
-|1071115|2014-01-07 11:15:...|   23|     221|MSP|INL|Minneapolis|International Falls|       MN|       MN|
-|1081115|2014-01-08 11:15:...|   -9|     221|MSP|INL|Minneapolis|International Falls|       MN|       MN|
-|1091115|2014-01-09 11:15:...|   11|     221|MSP|INL|Minneapolis|International Falls|       MN|       MN|
-|1101115|2014-01-10 11:15:...|   -3|     221|MSP|INL|Minneapolis|International Falls|       MN|       MN|
-|1112015|2014-01-11 20:15:...|   -7|     221|MSP|INL|Minneapolis|International Falls|       MN|       MN|
-+-------+--------------------+-----+--------+---+---+-----------+-------------------+---------+---------+
-only showing top 10 rows</pre>
-</div>
-</div>
-
 </div>
 </div>
 
@@ -12005,7 +11984,7 @@ only showing top 10 rows</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[42]:</div>
+<div class="prompt input_prompt">In&nbsp;[6]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-python2"><pre><span></span># Note, ensure you have already installed the GraphFrames spack-package
@@ -12041,7 +12020,7 @@ tripVertices.cache()
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[43]:</div>
+<div class="prompt input_prompt">In&nbsp;[7]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-python2"><pre><span></span># Vertices
@@ -12063,17 +12042,17 @@ tripVertices.show()
 | id|            City|State|Country|
 +---+----------------+-----+-------+
 |FAT|          Fresno|   CA|    USA|
-|CMH|        Columbus|   OH|    USA|
 |PHX|         Phoenix|   AZ|    USA|
+|CMH|        Columbus|   OH|    USA|
 |PAH|         Paducah|   KY|    USA|
 |COS|Colorado Springs|   CO|    USA|
-|MYR|    Myrtle Beach|   SC|    USA|
 |RNO|            Reno|   NV|    USA|
+|MYR|    Myrtle Beach|   SC|    USA|
+|PSC|           Pasco|   WA|    USA|
+|CAE|        Columbia|   SC|    USA|
+|BPT|        Beaumont|   TX|    USA|
 |SRQ|        Sarasota|   FL|    USA|
 |VLD|        Valdosta|   GA|    USA|
-|PSC|           Pasco|   WA|    USA|
-|BPT|        Beaumont|   TX|    USA|
-|CAE|        Columbia|   SC|    USA|
 |LAX|     Los Angeles|   CA|    USA|
 |DAY|          Dayton|   OH|    USA|
 |AVP|    Wilkes-Barre|   PA|    USA|
@@ -12093,7 +12072,7 @@ only showing top 20 rows</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[44]:</div>
+<div class="prompt input_prompt">In&nbsp;[8]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-python2"><pre><span></span># Edges
@@ -12145,7 +12124,7 @@ only showing top 20 rows</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[45]:</div>
+<div class="prompt input_prompt">In&nbsp;[9]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-python2"><pre><span></span># Build `tripGraph` GraphFrame
@@ -12198,7 +12177,7 @@ tripGraphPrime = GraphFrame(tripVertices, tripEdgesPrime)
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[46]:</div>
+<div class="prompt input_prompt">In&nbsp;[10]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-python2"><pre><span></span>print &quot;Airports: %d&quot; % tripGraph.vertices.count()
@@ -12235,7 +12214,7 @@ Trips: 1361141</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[47]:</div>
+<div class="prompt input_prompt">In&nbsp;[11]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-python2"><pre><span></span>tripGraph.edges.groupBy().max(&quot;delay&quot;).show()
@@ -12265,7 +12244,7 @@ Trips: 1361141</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[48]:</div>
+<div class="prompt input_prompt">In&nbsp;[12]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-python2"><pre><span></span># Finding the longest Delay
@@ -12305,7 +12284,7 @@ tripGraph.edges.groupBy().max(&quot;delay&quot;).show()
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[49]:</div>
+<div class="prompt input_prompt">In&nbsp;[13]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-python2"><pre><span></span># Determining number of on-time / early flights vs. delayed flights
@@ -12344,41 +12323,32 @@ Delayed Flights: 580672</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[50]:</div>
+<div class="prompt input_prompt">In&nbsp;[34]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-python2"><pre><span></span>tripGraph.edges\
+<div class=" highlight hl-python2"><pre><span></span>flightDelays = tripGraph.edges\
   .filter(&quot;src = &#39;SEA&#39; and delay &gt; 0&quot;)\
   .groupBy(&quot;src&quot;, &quot;dst&quot;)\
   .avg(&quot;delay&quot;)\
-  .sort(desc(&quot;avg(delay)&quot;))\
-  .show(5)
-  
+  .sort(desc(&quot;avg(delay)&quot;))
+flightDelays.createOrReplaceTempView(&quot;flightDelays&quot;)
 </pre></div>
 
 </div>
 </div>
 </div>
 
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area"><div class="prompt"></div>
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>+---+---+------------------+
-|src|dst|        avg(delay)|
-+---+---+------------------+
-|SEA|PHL|55.666666666666664|
-|SEA|COS| 43.53846153846154|
-|SEA|FAT| 43.03846153846154|
-|SEA|LGB| 39.39705882352941|
-|SEA|IAD|37.733333333333334|
-+---+---+------------------+
-only showing top 5 rows</pre>
 </div>
-</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[37]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-python2"><pre><span></span>%%sql
+select * from flightDelays order by `avg(delay)` desc limit 10
+</pre></div>
 
+</div>
 </div>
 </div>
 
@@ -12394,7 +12364,7 @@ only showing top 5 rows</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[51]:</div>
+<div class="prompt input_prompt">In&nbsp;[15]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-python2"><pre><span></span># After displaying tripDelays, use Plot Options to set `state_dst` as a Key.
@@ -12419,21 +12389,21 @@ tripGraph.edges.filter(&quot;delay &gt; 0&quot;).show()
 |1071115|   23|MSP|INL|International Falls|       MN|
 |1091115|   11|MSP|INL|International Falls|       MN|
 |1171115|    4|MSP|INL|International Falls|       MN|
+|3031115|   17|MSP|INL|International Falls|       MN|
+|3171115|   25|MSP|INL|International Falls|       MN|
+|3181115|    2|MSP|INL|International Falls|       MN|
+|3271115|    9|MSP|INL|International Falls|       MN|
 |2091925|    1|MSP|INL|International Falls|       MN|
 |2152015|   16|MSP|INL|International Falls|       MN|
 |2161925|  169|MSP|INL|International Falls|       MN|
 |2171115|   27|MSP|INL|International Falls|       MN|
 |2181115|   96|MSP|INL|International Falls|       MN|
 |2281115|    5|MSP|INL|International Falls|       MN|
-|3031115|   17|MSP|INL|International Falls|       MN|
-|3171115|   25|MSP|INL|International Falls|       MN|
-|3181115|    2|MSP|INL|International Falls|       MN|
-|3271115|    9|MSP|INL|International Falls|       MN|
-|1011646|   71|IAH|MSY|        New Orleans|       LA|
-|1031519|  136|IAH|MSY|        New Orleans|       LA|
-|1042123|   37|IAH|MSY|        New Orleans|       LA|
-|1041529|   52|IAH|MSY|        New Orleans|       LA|
-|1051341|   79|IAH|MSY|        New Orleans|       LA|
+|3021218|    2|IAH|MSY|        New Orleans|       LA|
+|3031215|  105|IAH|MSY|        New Orleans|       LA|
+|3031646|   58|IAH|MSY|        New Orleans|       LA|
+|3041738|   71|IAH|MSY|        New Orleans|       LA|
+|3041646|   14|IAH|MSY|        New Orleans|       LA|
 +-------+-----+---+---+-------------------+---------+
 only showing top 20 rows</pre>
 </div>
@@ -12454,7 +12424,7 @@ only showing top 20 rows</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[52]:</div>
+<div class="prompt input_prompt">In&nbsp;[16]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-python2"><pre><span></span># States with the longest cumulative delays (with individual delays &gt; 100 minutes) (origin: Seattle)
@@ -12476,8 +12446,8 @@ tripGraph.edges.filter(&quot;src = &#39;SEA&#39; and delay &gt; 100&quot;).show(
 +-------+-----+---+---+-------------+---------+
 |3201938|  108|SEA|BUR|      Burbank|       CA|
 |3201655|  107|SEA|SNA|Orange County|       CA|
-|3061600|  130|SEA|OAK|      Oakland|       CA|
 |2282055|  150|SEA|OAK|      Oakland|       CA|
+|3061600|  130|SEA|OAK|      Oakland|       CA|
 |1011950|  123|SEA|OAK|      Oakland|       CA|
 |1021950|  194|SEA|OAK|      Oakland|       CA|
 |1021615|  317|SEA|OAK|      Oakland|       CA|
@@ -12488,12 +12458,12 @@ tripGraph.edges.filter(&quot;src = &#39;SEA&#39; and delay &gt; 100&quot;).show(
 |1061755|  107|SEA|OAK|      Oakland|       CA|
 |1081330|  118|SEA|OAK|      Oakland|       CA|
 |3170815|  199|SEA|DCA|Washington DC|     null|
-|3130720|  117|SEA|KTN|    Ketchikan|       AK|
 |2151845|  128|SEA|KTN|    Ketchikan|       AK|
 |2281845|  104|SEA|KTN|    Ketchikan|       AK|
-|3010740|  103|SEA|IAH|      Houston|       TX|
-|3021152|  124|SEA|IAH|      Houston|       TX|
-|3121152|  340|SEA|IAH|      Houston|       TX|
+|3130720|  117|SEA|KTN|    Ketchikan|       AK|
+|2141157|  127|SEA|IAH|      Houston|       TX|
+|2150740|  466|SEA|IAH|      Houston|       TX|
+|2180750|  105|SEA|IAH|      Houston|       TX|
 +-------+-----+---+---+-------------+---------+
 only showing top 20 rows</pre>
 </div>
@@ -12520,7 +12490,7 @@ only showing top 20 rows</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[53]:</div>
+<div class="prompt input_prompt">In&nbsp;[17]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-python2"><pre><span></span># Degrees
@@ -12571,7 +12541,7 @@ tripGraph.degrees.sort(desc(&quot;degree&quot;)).limit(20).show()
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[54]:</div>
+<div class="prompt input_prompt">In&nbsp;[18]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-python2"><pre><span></span># inDegrees
@@ -12622,7 +12592,7 @@ tripGraph.inDegrees.sort(desc(&quot;inDegree&quot;)).limit(20).show()
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[55]:</div>
+<div class="prompt input_prompt">In&nbsp;[19]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-python2"><pre><span></span># outDegrees
@@ -12692,7 +12662,7 @@ tripGraph.outDegrees.sort(desc(&quot;outDegree&quot;)).limit(20).show()
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[56]:</div>
+<div class="prompt input_prompt">In&nbsp;[20]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-python2"><pre><span></span># Using tripGraphPrime to more easily display 
@@ -12717,30 +12687,30 @@ motifs.show()
 
 <div class="output_area"><div class="prompt"></div>
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>+-------------------+--------------------+--------------------+--------------------+--------------------+
-|                  a|                  ab|                   b|                  bc|                   c|
-+-------------------+--------------------+--------------------+--------------------+--------------------+
-|[EUG,Eugene,OR,USA]|[1011627,-5,EUG,SFO]|[SFO,San Francisc...|[1021507,536,SFO,...|[JFK,New York,NY,...|
-|[EUG,Eugene,OR,USA]|[1020800,-3,EUG,SFO]|[SFO,San Francisc...|[1021507,536,SFO,...|[JFK,New York,NY,...|
-|[EUG,Eugene,OR,USA]|[1020520,-1,EUG,SFO]|[SFO,San Francisc...|[1021507,536,SFO,...|[JFK,New York,NY,...|
-|[EUG,Eugene,OR,USA]|[1021023,16,EUG,SFO]|[SFO,San Francisc...|[1021507,536,SFO,...|[JFK,New York,NY,...|
-|[EUG,Eugene,OR,USA]|[1021245,-6,EUG,SFO]|[SFO,San Francisc...|[1021507,536,SFO,...|[JFK,New York,NY,...|
-|[EUG,Eugene,OR,USA]|[1021350,-2,EUG,SFO]|[SFO,San Francisc...|[1021507,536,SFO,...|[JFK,New York,NY,...|
-|[EUG,Eugene,OR,USA]|[1201701,-6,EUG,SFO]|[SFO,San Francisc...|[1211508,593,SFO,...|[JFK,New York,NY,...|
-|[EUG,Eugene,OR,USA]|[1210812,-9,EUG,SFO]|[SFO,San Francisc...|[1211508,593,SFO,...|[JFK,New York,NY,...|
-|[EUG,Eugene,OR,USA]|[1210520,-5,EUG,SFO]|[SFO,San Francisc...|[1211508,593,SFO,...|[JFK,New York,NY,...|
-|[EUG,Eugene,OR,USA]|[1211038,118,EUG,...|[SFO,San Francisc...|[1211508,593,SFO,...|[JFK,New York,NY,...|
-|[EUG,Eugene,OR,USA]|[1211242,-2,EUG,SFO]|[SFO,San Francisc...|[1211508,593,SFO,...|[JFK,New York,NY,...|
-|[EUG,Eugene,OR,USA]| [1211349,1,EUG,SFO]|[SFO,San Francisc...|[1211508,593,SFO,...|[JFK,New York,NY,...|
-|[EUG,Eugene,OR,USA]|[2021638,-8,EUG,SFO]|[SFO,San Francisc...|[2030906,516,SFO,...|[PHL,Philadelphia...|
-|[EUG,Eugene,OR,USA]| [2021038,0,EUG,SFO]|[SFO,San Francisc...|[2030906,516,SFO,...|[PHL,Philadelphia...|
-|[EUG,Eugene,OR,USA]|[2021242,-2,EUG,SFO]|[SFO,San Francisc...|[2030906,516,SFO,...|[PHL,Philadelphia...|
-|[EUG,Eugene,OR,USA]|[2021349,69,EUG,SFO]|[SFO,San Francisc...|[2030906,516,SFO,...|[PHL,Philadelphia...|
-|[EUG,Eugene,OR,USA]|[2030812,-6,EUG,SFO]|[SFO,San Francisc...|[2030906,516,SFO,...|[PHL,Philadelphia...|
-|[EUG,Eugene,OR,USA]|[2030520,-4,EUG,SFO]|[SFO,San Francisc...|[2030906,516,SFO,...|[PHL,Philadelphia...|
-|[EUG,Eugene,OR,USA]| [2090640,0,EUG,SFO]|[SFO,San Francisc...|[2092110,740,SFO,...|  [MIA,Miami,FL,USA]|
-|[EUG,Eugene,OR,USA]| [2090640,0,EUG,SFO]|[SFO,San Francisc...|[2092230,636,SFO,...|[JFK,New York,NY,...|
-+-------------------+--------------------+--------------------+--------------------+--------------------+
+<pre>+--------------------+--------------------+--------------------+--------------------+--------------------+
+|                   a|                  ab|                   b|                  bc|                   c|
++--------------------+--------------------+--------------------+--------------------+--------------------+
+|[DCA,Washington D...|[2030820,25,DCA,SFO]|[SFO,San Francisc...|[2030906,516,SFO,...|[PHL,Philadelphia...|
+|[DCA,Washington D...|[2090823,-4,DCA,SFO]|[SFO,San Francisc...|[2092110,740,SFO,...|  [MIA,Miami,FL,USA]|
+|[DCA,Washington D...|[2090823,-4,DCA,SFO]|[SFO,San Francisc...|[2092230,636,SFO,...|[JFK,New York,NY,...|
+|[DCA,Washington D...| [2130805,0,DCA,SFO]|[SFO,San Francisc...|[2131420,504,SFO,...|[SAN,San Diego,CA...|
+|[DCA,Washington D...|[2190805,-1,DCA,SFO]|[SFO,San Francisc...|[2190925,1638,SFO...|[ORD,Chicago,IL,USA]|
+|[DCA,Washington D...|[2021700,110,DCA,...|[SFO,San Francisc...|[2030906,516,SFO,...|[PHL,Philadelphia...|
+|[DCA,Washington D...|[2091700,95,DCA,SFO]|[SFO,San Francisc...|[2092110,740,SFO,...|  [MIA,Miami,FL,USA]|
+|[DCA,Washington D...|[2091700,95,DCA,SFO]|[SFO,San Francisc...|[2092230,636,SFO,...|[JFK,New York,NY,...|
+|[DCA,Washington D...|[2121700,27,DCA,SFO]|[SFO,San Francisc...|[2131420,504,SFO,...|[SAN,San Diego,CA...|
+|[DCA,Washington D...|[2181700,22,DCA,SFO]|[SFO,San Francisc...|[2190925,1638,SFO...|[ORD,Chicago,IL,USA]|
+|[DCA,Washington D...|[1020800,14,DCA,SFO]|[SFO,San Francisc...|[1021507,536,SFO,...|[JFK,New York,NY,...|
+|[DCA,Washington D...| [1210820,0,DCA,SFO]|[SFO,San Francisc...|[1211508,593,SFO,...|[JFK,New York,NY,...|
+|[DCA,Washington D...|[1011705,-4,DCA,SFO]|[SFO,San Francisc...|[1021507,536,SFO,...|[JFK,New York,NY,...|
+|[DCA,Washington D...| [1201700,0,DCA,SFO]|[SFO,San Francisc...|[1211508,593,SFO,...|[JFK,New York,NY,...|
+|[LGB,Long Beach,C...|[1011531,-3,LGB,SFO]|[SFO,San Francisc...|[1021507,536,SFO,...|[JFK,New York,NY,...|
+|[LGB,Long Beach,C...|[1011655,-10,LGB,...|[SFO,San Francisc...|[1021507,536,SFO,...|[JFK,New York,NY,...|
+|[LGB,Long Beach,C...|[1020705,-4,LGB,SFO]|[SFO,San Francisc...|[1021507,536,SFO,...|[JFK,New York,NY,...|
+|[LGB,Long Beach,C...| [1201524,4,LGB,SFO]|[SFO,San Francisc...|[1211508,593,SFO,...|[JFK,New York,NY,...|
+|[LGB,Long Beach,C...| [1201705,1,LGB,SFO]|[SFO,San Francisc...|[1211508,593,SFO,...|[JFK,New York,NY,...|
+|[LGB,Long Beach,C...|[1202028,-5,LGB,SFO]|[SFO,San Francisc...|[1211508,593,SFO,...|[JFK,New York,NY,...|
++--------------------+--------------------+--------------------+--------------------+--------------------+
 only showing top 20 rows</pre>
 </div>
 </div>
@@ -12761,7 +12731,7 @@ only showing top 20 rows</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[57]:</div>
+<div class="prompt input_prompt">In&nbsp;[21]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-python2"><pre><span></span># Determining Airport ranking of importance using `pageRank`
@@ -12782,16 +12752,16 @@ ranks.vertices.orderBy(ranks.vertices.pagerank.desc()).limit(10).show()
 <pre>+---+--------------+-----+-------+------------------+
 | id|          City|State|Country|          pagerank|
 +---+--------------+-----+-------+------------------+
-|ATL|       Atlanta|   GA|    USA|10.102340247483998|
-|DFW|        Dallas|   TX|    USA| 7.252067259650553|
-|ORD|       Chicago|   IL|    USA| 7.165214941661304|
-|DEN|        Denver|   CO|    USA| 5.041255573485165|
-|LAX|   Los Angeles|   CA|    USA| 4.178333397888561|
-|IAH|       Houston|   TX|    USA| 4.008169343174373|
-|SFO| San Francisco|   CA|    USA|3.5185952036528363|
-|SLC|Salt Lake City|   UT|    USA| 3.356482258162285|
-|PHX|       Phoenix|   AZ|    USA|3.0896771274953156|
-|LAS|     Las Vegas|   NV|    USA|2.4377448370944124|
+|ATL|       Atlanta|   GA|    USA|10.102340247484168|
+|DFW|        Dallas|   TX|    USA|7.2520672596498175|
+|ORD|       Chicago|   IL|    USA| 7.165214941660683|
+|DEN|        Denver|   CO|    USA|5.0412555734844755|
+|LAX|   Los Angeles|   CA|    USA| 4.178333397887623|
+|IAH|       Houston|   TX|    USA|  4.00816934317367|
+|SFO| San Francisco|   CA|    USA|3.5185952036532795|
+|SLC|Salt Lake City|   UT|    USA|3.3564822581623024|
+|PHX|       Phoenix|   AZ|    USA|3.0896771274957437|
+|LAS|     Las Vegas|   NV|    USA| 2.437744837094788|
 +---+--------------+-----+-------+------------------+</pre>
 </div>
 </div>
@@ -12812,7 +12782,7 @@ ranks.vertices.orderBy(ranks.vertices.pagerank.desc()).limit(10).show()
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[58]:</div>
+<div class="prompt input_prompt">In&nbsp;[38]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-python2"><pre><span></span># Determine the most popular flights (single city hops)
@@ -12821,6 +12791,7 @@ topTrips = tripGraph \
   .edges \
   .groupBy(&quot;src&quot;, &quot;dst&quot;) \
   .agg(func.count(&quot;delay&quot;).alias(&quot;trips&quot;)) 
+topTrips.createOrReplaceTempView(&quot;topTrips&quot;)
 </pre></div>
 
 </div>
@@ -12830,7 +12801,21 @@ topTrips = tripGraph \
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[59]:</div>
+<div class="prompt input_prompt">In&nbsp;[40]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-python2"><pre><span></span>%%sql
+select * from topTrips order by trips desc limit 10
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[23]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-python2"><pre><span></span># Show the top 20 most popular flights (single city hops)
@@ -12880,7 +12865,7 @@ topTrips.orderBy(topTrips.trips.desc()).limit(10).show()
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[60]:</div>
+<div class="prompt input_prompt">In&nbsp;[24]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-python2"><pre><span></span># Calculate the inDeg (flights into the airport) and outDeg (flights leaving the airport)
@@ -12929,7 +12914,7 @@ nonTransferAirports.show()
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[61]:</div>
+<div class="prompt input_prompt">In&nbsp;[25]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-python2"><pre><span></span># Join back to the `airports` DataFrame (instead of registering temp table as above)
@@ -12984,7 +12969,7 @@ transferAirports.orderBy(&quot;degreeRatio&quot;).limit(10).show()
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[62]:</div>
+<div class="prompt input_prompt">In&nbsp;[26]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-python2"><pre><span></span># Example 1: Direct Seattle to San Francisco 
@@ -13008,26 +12993,26 @@ filteredPaths.show()
 <pre>+--------------------+--------------------+--------------------+
 |                from|                  e0|                  to|
 +--------------------+--------------------+--------------------+
-|[SEA,Seattle,WA,USA]|[3010715,49,SEA,S...|[SFO,San Francisc...|
-|[SEA,Seattle,WA,USA]|[3012125,-6,SEA,S...|[SFO,San Francisc...|
-|[SEA,Seattle,WA,USA]|[3011835,-2,SEA,S...|[SFO,San Francisc...|
-|[SEA,Seattle,WA,USA]|[3011220,2,SEA,SF...|[SFO,San Francisc...|
-|[SEA,Seattle,WA,USA]|[3010955,67,SEA,S...|[SFO,San Francisc...|
-|[SEA,Seattle,WA,USA]|[3011405,-2,SEA,S...|[SFO,San Francisc...|
-|[SEA,Seattle,WA,USA]|[3020715,-1,SEA,S...|[SFO,San Francisc...|
-|[SEA,Seattle,WA,USA]|[3022125,0,SEA,SF...|[SFO,San Francisc...|
-|[SEA,Seattle,WA,USA]|[3021835,16,SEA,S...|[SFO,San Francisc...|
-|[SEA,Seattle,WA,USA]|[3020610,-1,SEA,S...|[SFO,San Francisc...|
-|[SEA,Seattle,WA,USA]|[3021220,12,SEA,S...|[SFO,San Francisc...|
-|[SEA,Seattle,WA,USA]|[3021100,22,SEA,S...|[SFO,San Francisc...|
-|[SEA,Seattle,WA,USA]|[3021405,10,SEA,S...|[SFO,San Francisc...|
-|[SEA,Seattle,WA,USA]|[3030715,-3,SEA,S...|[SFO,San Francisc...|
-|[SEA,Seattle,WA,USA]|[3032125,-2,SEA,S...|[SFO,San Francisc...|
-|[SEA,Seattle,WA,USA]|[3031835,-2,SEA,S...|[SFO,San Francisc...|
-|[SEA,Seattle,WA,USA]|[3030610,-5,SEA,S...|[SFO,San Francisc...|
-|[SEA,Seattle,WA,USA]|[3031220,-2,SEA,S...|[SFO,San Francisc...|
-|[SEA,Seattle,WA,USA]|[3030955,1,SEA,SF...|[SFO,San Francisc...|
-|[SEA,Seattle,WA,USA]|[3031100,-1,SEA,S...|[SFO,San Francisc...|
+|[SEA,Seattle,WA,USA]|[2010720,-2,SEA,S...|[SFO,San Francisc...|
+|[SEA,Seattle,WA,USA]|[2012125,-3,SEA,S...|[SFO,San Francisc...|
+|[SEA,Seattle,WA,USA]|[2011845,-4,SEA,S...|[SFO,San Francisc...|
+|[SEA,Seattle,WA,USA]|[2011220,-5,SEA,S...|[SFO,San Francisc...|
+|[SEA,Seattle,WA,USA]|[2010955,-4,SEA,S...|[SFO,San Francisc...|
+|[SEA,Seattle,WA,USA]|[2011405,-2,SEA,S...|[SFO,San Francisc...|
+|[SEA,Seattle,WA,USA]|[2020720,21,SEA,S...|[SFO,San Francisc...|
+|[SEA,Seattle,WA,USA]|[2022125,7,SEA,SF...|[SFO,San Francisc...|
+|[SEA,Seattle,WA,USA]|[2021845,1,SEA,SF...|[SFO,San Francisc...|
+|[SEA,Seattle,WA,USA]|[2020610,-8,SEA,S...|[SFO,San Francisc...|
+|[SEA,Seattle,WA,USA]|[2021220,67,SEA,S...|[SFO,San Francisc...|
+|[SEA,Seattle,WA,USA]|[2021100,0,SEA,SF...|[SFO,San Francisc...|
+|[SEA,Seattle,WA,USA]|[2021405,6,SEA,SF...|[SFO,San Francisc...|
+|[SEA,Seattle,WA,USA]|[2030720,9,SEA,SF...|[SFO,San Francisc...|
+|[SEA,Seattle,WA,USA]|[2032125,2,SEA,SF...|[SFO,San Francisc...|
+|[SEA,Seattle,WA,USA]|[2031845,3,SEA,SF...|[SFO,San Francisc...|
+|[SEA,Seattle,WA,USA]|[2030610,-1,SEA,S...|[SFO,San Francisc...|
+|[SEA,Seattle,WA,USA]|[2031220,1,SEA,SF...|[SFO,San Francisc...|
+|[SEA,Seattle,WA,USA]|[2030955,4,SEA,SF...|[SFO,San Francisc...|
+|[SEA,Seattle,WA,USA]|[2031100,6,SEA,SF...|[SFO,San Francisc...|
 +--------------------+--------------------+--------------------+
 only showing top 20 rows</pre>
 </div>
@@ -13049,7 +13034,7 @@ only showing top 20 rows</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[63]:</div>
+<div class="prompt input_prompt">In&nbsp;[27]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-python2"><pre><span></span># Example 2: Direct San Francisco and Buffalo
@@ -13093,7 +13078,7 @@ filteredPaths.show()
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[64]:</div>
+<div class="prompt input_prompt">In&nbsp;[28]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-python2"><pre><span></span># Example 2a: Flying from San Francisco to Buffalo
@@ -13117,26 +13102,26 @@ filteredPaths.show()
 <pre>+--------------------+--------------------+-------------------+--------------------+--------------------+
 |                from|                  e0|                 v1|                  e1|                  to|
 +--------------------+--------------------+-------------------+--------------------+--------------------+
-|[SFO,San Francisc...|[1010700,0,SFO,BO...|[BOS,Boston,MA,USA]|[1010635,-6,BOS,B...|[BUF,Buffalo,NY,USA]|
-|[SFO,San Francisc...|[1010700,0,SFO,BO...|[BOS,Boston,MA,USA]|[1011059,13,BOS,B...|[BUF,Buffalo,NY,USA]|
-|[SFO,San Francisc...|[1010700,0,SFO,BO...|[BOS,Boston,MA,USA]|[1011427,19,BOS,B...|[BUF,Buffalo,NY,USA]|
-|[SFO,San Francisc...|[1010700,0,SFO,BO...|[BOS,Boston,MA,USA]|[1020635,-4,BOS,B...|[BUF,Buffalo,NY,USA]|
-|[SFO,San Francisc...|[1010700,0,SFO,BO...|[BOS,Boston,MA,USA]|[1021059,0,BOS,BU...|[BUF,Buffalo,NY,USA]|
-|[SFO,San Francisc...|[1010700,0,SFO,BO...|[BOS,Boston,MA,USA]|[1021427,194,BOS,...|[BUF,Buffalo,NY,USA]|
-|[SFO,San Francisc...|[1010700,0,SFO,BO...|[BOS,Boston,MA,USA]|[1030635,0,BOS,BU...|[BUF,Buffalo,NY,USA]|
-|[SFO,San Francisc...|[1010700,0,SFO,BO...|[BOS,Boston,MA,USA]|[1031059,0,BOS,BU...|[BUF,Buffalo,NY,USA]|
-|[SFO,San Francisc...|[1010700,0,SFO,BO...|[BOS,Boston,MA,USA]|[1031427,0,BOS,BU...|[BUF,Buffalo,NY,USA]|
-|[SFO,San Francisc...|[1010700,0,SFO,BO...|[BOS,Boston,MA,USA]|[1040635,16,BOS,B...|[BUF,Buffalo,NY,USA]|
-|[SFO,San Francisc...|[1010700,0,SFO,BO...|[BOS,Boston,MA,USA]|[1041552,96,BOS,B...|[BUF,Buffalo,NY,USA]|
-|[SFO,San Francisc...|[1010700,0,SFO,BO...|[BOS,Boston,MA,USA]|[1050635,1,BOS,BU...|[BUF,Buffalo,NY,USA]|
-|[SFO,San Francisc...|[1010700,0,SFO,BO...|[BOS,Boston,MA,USA]|[1051059,48,BOS,B...|[BUF,Buffalo,NY,USA]|
-|[SFO,San Francisc...|[1010700,0,SFO,BO...|[BOS,Boston,MA,USA]|[1051427,443,BOS,...|[BUF,Buffalo,NY,USA]|
-|[SFO,San Francisc...|[1010700,0,SFO,BO...|[BOS,Boston,MA,USA]|[1060635,0,BOS,BU...|[BUF,Buffalo,NY,USA]|
-|[SFO,San Francisc...|[1010700,0,SFO,BO...|[BOS,Boston,MA,USA]|[1061059,294,BOS,...|[BUF,Buffalo,NY,USA]|
-|[SFO,San Francisc...|[1010700,0,SFO,BO...|[BOS,Boston,MA,USA]|[1061427,0,BOS,BU...|[BUF,Buffalo,NY,USA]|
-|[SFO,San Francisc...|[1010700,0,SFO,BO...|[BOS,Boston,MA,USA]|[1070730,0,BOS,BU...|[BUF,Buffalo,NY,USA]|
-|[SFO,San Francisc...|[1010700,0,SFO,BO...|[BOS,Boston,MA,USA]|[1071730,0,BOS,BU...|[BUF,Buffalo,NY,USA]|
-|[SFO,San Francisc...|[1010700,0,SFO,BO...|[BOS,Boston,MA,USA]|[1080710,0,BOS,BU...|[BUF,Buffalo,NY,USA]|
+|[SFO,San Francisc...|[2010700,5,SFO,BO...|[BOS,Boston,MA,USA]|[3010630,-4,BOS,B...|[BUF,Buffalo,NY,USA]|
+|[SFO,San Francisc...|[2010700,5,SFO,BO...|[BOS,Boston,MA,USA]|[3011445,8,BOS,BU...|[BUF,Buffalo,NY,USA]|
+|[SFO,San Francisc...|[2010700,5,SFO,BO...|[BOS,Boston,MA,USA]|[3020630,-5,BOS,B...|[BUF,Buffalo,NY,USA]|
+|[SFO,San Francisc...|[2010700,5,SFO,BO...|[BOS,Boston,MA,USA]|[3021049,-7,BOS,B...|[BUF,Buffalo,NY,USA]|
+|[SFO,San Francisc...|[2010700,5,SFO,BO...|[BOS,Boston,MA,USA]|[3021445,-3,BOS,B...|[BUF,Buffalo,NY,USA]|
+|[SFO,San Francisc...|[2010700,5,SFO,BO...|[BOS,Boston,MA,USA]|[3030630,0,BOS,BU...|[BUF,Buffalo,NY,USA]|
+|[SFO,San Francisc...|[2010700,5,SFO,BO...|[BOS,Boston,MA,USA]|[3031049,-3,BOS,B...|[BUF,Buffalo,NY,USA]|
+|[SFO,San Francisc...|[2010700,5,SFO,BO...|[BOS,Boston,MA,USA]|[3031445,-3,BOS,B...|[BUF,Buffalo,NY,USA]|
+|[SFO,San Francisc...|[2010700,5,SFO,BO...|[BOS,Boston,MA,USA]|[3040630,-8,BOS,B...|[BUF,Buffalo,NY,USA]|
+|[SFO,San Francisc...|[2010700,5,SFO,BO...|[BOS,Boston,MA,USA]|[3041049,-11,BOS,...|[BUF,Buffalo,NY,USA]|
+|[SFO,San Francisc...|[2010700,5,SFO,BO...|[BOS,Boston,MA,USA]|[3041445,15,BOS,B...|[BUF,Buffalo,NY,USA]|
+|[SFO,San Francisc...|[2010700,5,SFO,BO...|[BOS,Boston,MA,USA]|[3050630,-6,BOS,B...|[BUF,Buffalo,NY,USA]|
+|[SFO,San Francisc...|[2010700,5,SFO,BO...|[BOS,Boston,MA,USA]|[3051049,-10,BOS,...|[BUF,Buffalo,NY,USA]|
+|[SFO,San Francisc...|[2010700,5,SFO,BO...|[BOS,Boston,MA,USA]|[3051445,-10,BOS,...|[BUF,Buffalo,NY,USA]|
+|[SFO,San Francisc...|[2010700,5,SFO,BO...|[BOS,Boston,MA,USA]|[3060630,-10,BOS,...|[BUF,Buffalo,NY,USA]|
+|[SFO,San Francisc...|[2010700,5,SFO,BO...|[BOS,Boston,MA,USA]|[3061049,-7,BOS,B...|[BUF,Buffalo,NY,USA]|
+|[SFO,San Francisc...|[2010700,5,SFO,BO...|[BOS,Boston,MA,USA]|[3061455,27,BOS,B...|[BUF,Buffalo,NY,USA]|
+|[SFO,San Francisc...|[2010700,5,SFO,BO...|[BOS,Boston,MA,USA]|[3061730,-3,BOS,B...|[BUF,Buffalo,NY,USA]|
+|[SFO,San Francisc...|[2010700,5,SFO,BO...|[BOS,Boston,MA,USA]|[3070630,-9,BOS,B...|[BUF,Buffalo,NY,USA]|
+|[SFO,San Francisc...|[2010700,5,SFO,BO...|[BOS,Boston,MA,USA]|[3071049,-6,BOS,B...|[BUF,Buffalo,NY,USA]|
 +--------------------+--------------------+-------------------+--------------------+--------------------+
 only showing top 20 rows</pre>
 </div>
@@ -13158,7 +13143,7 @@ only showing top 20 rows</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[65]:</div>
+<div class="prompt input_prompt">In&nbsp;[29]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-python2"><pre><span></span>filteredPaths.groupBy(&quot;v1.id&quot;, &quot;v1.City&quot;).count().orderBy(desc(&quot;count&quot;)).limit(10).show()
